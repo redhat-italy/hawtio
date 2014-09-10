@@ -11,7 +11,7 @@
   <groupId>io.hawt</groupId>
   <artifactId>project</artifactId>
   <packaging>pom</packaging>
-  <version>1.5-SNAPSHOT</version>
+  <version>1.5-redhat-025</version>
   <name>project</name>
   <description>hawtio :: project</description>
   <url>http://hawt.io/</url>
@@ -62,10 +62,10 @@
     <appjs-outfile>${webapp-outdir}/app/app.js</appjs-outfile>
 
     <!-- versions -->
-    <perfectus-number>379</perfectus-number>
+    <perfectus-number>025</perfectus-number>
     <perfectus-previous-number>355</perfectus-previous-number>
     <perfectus-build>610${perfectus-number}</perfectus-build>
-    <activemq-version>5.10.0</activemq-version>
+    <activemq-version>5.10.0.redhat-620025</activemq-version>
     <activemq-leveldb-artifactid>activemq-leveldb-store</activemq-leveldb-artifactid>
     <aether-version>1.13.1</aether-version>
     <apollo-version>99-trunk-SNAPSHOT</apollo-version>
@@ -84,7 +84,7 @@
 
     <!-- fabric test version points to a previous release version to break cycle with fabric -->
     <fabric-test-version>1.0.0.redhat-${perfectus-previous-number}</fabric-test-version>
-    <fabric-version>1.0.0.redhat-${perfectus-number}</fabric-version>
+    <fabric-version>1.1.0.redhat-025</fabric-version>
     <felix.gogo.version>0.10.0</felix.gogo.version>
     <gitective-version>0.9.9</gitective-version>
 
@@ -123,7 +123,7 @@
     <jline.version>2.12</jline.version>
     <jolokia-version>1.2.2</jolokia-version>
     <junit-version>4.11</junit-version>
-    <karaf-version>2.4.0.redhat-620004</karaf-version>
+    <karaf-version>2.4.0.redhat-620025</karaf-version>
     <log4j-version>1.2.17</log4j-version>
     <maven-version>3.0.4</maven-version>
     <maven-antrun-plugin-version>1.7</maven-antrun-plugin-version>
@@ -442,7 +442,7 @@
     <profile>
       <id>fuse60</id>
       <properties>
-        <perfectus-number>024</perfectus-number>
+        <perfectus-number>025</perfectus-number>
         <perfectus-build>redhat-60${perfectus-number}</perfectus-build>
       </properties>
       <repositories>
@@ -462,14 +462,14 @@
     <profile>
       <id>fabricSnapshot</id>
       <properties>
-        <fabric-version>99-master-SNAPSHOT</fabric-version>
+        <fabric-version>1.1.0.redhat-025</fabric-version>
       </properties>
     </profile>
 
     <profile>
       <id>amqSnapshot</id>
       <properties>
-        <activemq-version>5.11-SNAPSHOT</activemq-version>
+        <activemq-version>5.10.0.redhat-620025</activemq-version>
         <activemq-leveldb-artifactid>activemq-leveldb-store</activemq-leveldb-artifactid>
       </properties>
 
@@ -493,7 +493,7 @@
     <profile>
       <id>camelSnapshot</id>
       <properties>
-        <camel-version>2.14-SNAPSHOT</camel-version>
+        <camel-version>2.13.2</camel-version>
       </properties>
       <repositories>
       </repositories>
@@ -503,10 +503,10 @@
     <profile>
       <id>snapshot</id>
       <properties>
-        <activemq-version>5.11-SNAPSHOT</activemq-version>
+        <activemq-version>5.10.0.redhat-620025</activemq-version>
         <activemq-leveldb-artifactid>activemq-leveldb-store</activemq-leveldb-artifactid>
-        <camel-version>2.14-SNAPSHOT</camel-version>
-        <fabric-version>99-master-SNAPSHOT</fabric-version>
+        <camel-version>2.13.2</camel-version>
+        <fabric-version>1.1.0.redhat-025</fabric-version>
       </properties>
 
       <repositories>
