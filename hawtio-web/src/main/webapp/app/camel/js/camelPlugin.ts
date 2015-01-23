@@ -203,7 +203,7 @@ module Camel {
       id: "camel",
       content: "Camel",
       title: "Manage your Apache Camel applications",
-      isValid: (workspace: Workspace) => workspace.treeContainsDomainAndProperties(jmxDomain),
+      isValid: (workspace: Workspace) => workspace.treeContainsDomainAndProperties(jmxDomain) && workspace.userIsMemberOf("admin"),
       href: () => "#/jmx/attributes?tab=camel",
       isActive: (workspace: Workspace) => workspace.isTopTabActive("camel")
     });

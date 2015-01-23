@@ -886,6 +886,10 @@ module Core {
       return false;
     }
 
+    public userIsMemberOf(group:string) {
+      return Core.IsMemberOf(this.userDetails, group);
+    }
+
     /**
      * Returns true if this workspace has any mbeans at all
      */

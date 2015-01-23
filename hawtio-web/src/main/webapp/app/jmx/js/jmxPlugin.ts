@@ -57,7 +57,7 @@ module Jmx {
       id: "jmx",
       content: "JMX",
       title: "View the JMX MBeans in this process",
-      isValid: (workspace: Workspace) => workspace.hasMBeans(),
+      isValid: (workspace: Workspace) => workspace.hasMBeans() && workspace.userIsMemberOf("admin"),
       href: () => "#/jmx/attributes",
       isActive: (workspace: Workspace) => workspace.isTopTabActive("jmx")
     });

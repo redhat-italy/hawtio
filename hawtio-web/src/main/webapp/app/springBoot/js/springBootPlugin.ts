@@ -22,7 +22,7 @@ module SpringBoot {
                 content: "Spring Boot",
                 title: "Manage your Spring Boot application",
                 isValid: function (workspace) {
-                    return true;
+                    return workspace.userIsMemberOf("admin");
                 },
                 href: function () {
                     return "#/springBoot/metrics";

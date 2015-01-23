@@ -25,7 +25,7 @@ module Camin {
       id: "camin",
       content: "Camel",
       title: "Insight into Camel",
-      isValid: (workspace) => Fabric.hasFabric(workspace),
+      isValid: (workspace) => Fabric.hasFabric(workspace) && workspace.userIsMemberOf("admin"),
       href: () => "#/camin",
       isActive: (workspace: Workspace) => workspace.isLinkActive("camin")
     });

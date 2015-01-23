@@ -24,7 +24,7 @@ module Health {
       id: "health",
       content: "Health",
       title: "View the health of the various sub systems",
-      isValid: (workspace: Workspace) => Health.hasHealthMBeans(workspace),
+      isValid: (workspace: Workspace) => Health.hasHealthMBeans(workspace) && workspace.userIsMemberOf("admin"),
       href: () => "#/health",
       isActive: (workspace: Workspace) => workspace.isTopTabActive("health")
     });

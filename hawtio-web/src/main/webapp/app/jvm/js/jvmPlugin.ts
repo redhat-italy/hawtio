@@ -33,7 +33,8 @@ module JVM {
       title: "Connect to other JVMs",
       isValid: (workspace) => {
         // we only want to be valid if we are not already connected from another hawtio
-        return connectOptions == null || connectOptions.name == null
+        //return connectOptions == null || connectOptions.name == null
+        return (connectOptions == null || connectOptions.name == null) && workspace.userIsMemberOf("admin");
       },
       href: () => {
         return '#/jvm/connect';

@@ -41,7 +41,7 @@ module Log {
       id: "logs",
       content: "Logs",
       title: "View and search the logs of this container",
-      isValid: (workspace:Workspace) => treeContainsLogQueryMBean(workspace),
+      isValid: (workspace:Workspace) => treeContainsLogQueryMBean(workspace) && workspace.userIsMemberOf("admin"),
       href: () => "#/logs"
     });
 

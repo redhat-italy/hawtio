@@ -31,7 +31,7 @@ module Quartz {
       id: "quartz",
       content: "Quartz",
       title: "Quartz Scheduler",
-      isValid: (workspace: Workspace) => workspace.treeContainsDomainAndProperties(jmxDomain),
+      isValid: (workspace: Workspace) => workspace.treeContainsDomainAndProperties(jmxDomain) && workspace.userIsMemberOf("admin"),
       href: () => "#/quartz/scheduler",
       isActive: (workspace:Workspace) => workspace.isTopTabActive("quartz")
     });

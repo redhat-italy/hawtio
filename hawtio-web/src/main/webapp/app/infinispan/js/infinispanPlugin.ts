@@ -67,7 +67,7 @@ module Infinispan {
       id: "infinispan",
       content: "Infinispan",
       title: "View your distributed data",
-      isValid: (workspace:Workspace) => workspace.treeContainsDomainAndProperties(jmxDomain),
+      isValid: (workspace:Workspace) => workspace.treeContainsDomainAndProperties(jmxDomain) && workspace.userIsMemberOf("admin"),
       href: () => "#/jmx/attributes?tab=infinispan",
       isActive: (workspace:Workspace) => workspace.isTopTabActive("infinispan")
     });

@@ -25,7 +25,7 @@ module Threads {
       id: "threads",
       content: "Threads",
       title: "JVM Threads",
-      isValid: (workspace:Workspace) => workspace.treeContainsDomainAndProperties(jmxDomain, {type: mbeanType}),
+      isValid: (workspace:Workspace) => workspace.treeContainsDomainAndProperties(jmxDomain, {type: mbeanType}) && workspace.userIsMemberOf("admin"),
       href: () => "#/threads",
       isActive: (workspace:Workspace) => workspace.isTopTabActive("threads")
     });

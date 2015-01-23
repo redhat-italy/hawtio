@@ -121,7 +121,7 @@ var Gogo = (function(Gogo) {
         id: "karaf.terminal",
         content: "Terminal",
         title: "Open a terminal to the Karaf server",
-        isValid: function () { return workspace.treeContainsDomainAndProperties("hawtio", {type: "plugin", name: "hawtio-karaf-terminal"}) },
+        isValid: function () { return workspace.treeContainsDomainAndProperties("hawtio", {type: "plugin", name: "hawtio-karaf-terminal"}) && workspace.userIsMemberOf("admin") },
         href: function() { return "#/gogo"; },
         isActive: function() { return workspace.isLinkActive("gogo"); }
       });

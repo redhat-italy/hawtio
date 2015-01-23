@@ -31,7 +31,7 @@ module Maven {
       id: "maven",
       content: "Maven",
       title: "Search maven repositories for artifacts",
-      isValid: (workspace: Workspace) => Maven.getMavenIndexerMBean(workspace),
+      isValid: (workspace: Workspace) => Maven.getMavenIndexerMBean(workspace) && workspace.userIsMemberOf("admin"),
       href: () => "#/maven/search",
       isActive: (workspace: Workspace) => workspace.isLinkActive("/maven")
     });

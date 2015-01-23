@@ -21,7 +21,7 @@ module OpenEJB {
       id: "openejb",
       content: "OpenEJB",
       title: "Manage your OpenEJB resources",
-      isValid: (workspace: Workspace) => workspace.treeContainsDomainAndProperties("openejb"),
+      isValid: (workspace: Workspace) => workspace.treeContainsDomainAndProperties("openejb") && workspace.userIsMemberOf("admin"),
       href: () => "#/jmx/attributes?tab=openejb",
       isActive: (workspace: Workspace) => workspace.isTopTabActive("openejb")
     });

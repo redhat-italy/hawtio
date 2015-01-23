@@ -100,6 +100,16 @@
   -->
   <deny>
     <mbean>
+      <name>hawtio:type=plugin,name=hawtio-karaf-terminal</name>
+      <operation>*</operation>
+      <attribute>*</attribute>
+    </mbean>
+    <mbean>
+      <name>java.lang:type=*</name>
+      <operation>*</operation>
+      <attribute>*</attribute>
+    </mbean>
+    <mbean>
       <!-- Exposes user/password of data source, so we forbid this one -->
       <name>com.mchange.v2.c3p0:type=PooledDataSource,*</name>
       <attribute>properties</attribute>

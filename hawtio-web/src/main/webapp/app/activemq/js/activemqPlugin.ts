@@ -94,7 +94,7 @@ module ActiveMQ {
       id: "activemq",
       content: "ActiveMQ",
       title: "Manage your ActiveMQ message brokers",
-      isValid: (workspace:Workspace) => workspace.treeContainsDomainAndProperties("org.apache.activemq"),
+      isValid: (workspace:Workspace) => workspace.treeContainsDomainAndProperties("org.apache.activemq") && workspace.userIsMemberOf("admin"),
       href: () => "#/jmx/attributes?tab=activemq",
       isActive: () => workspace.isTopTabActive("activemq")
     });

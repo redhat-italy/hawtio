@@ -70,7 +70,7 @@ module Insight {
             title: "View Insight metrics",
             href: () => "#/insight/all",
             isValid: (workspace:Workspace) => {
-                return Fabric.hasFabric(workspace) && Insight.hasInsight(workspace);
+                return Fabric.hasFabric(workspace) && Insight.hasInsight(workspace) && workspace.userIsMemberOf("admin");
             }
         });
 
@@ -81,7 +81,7 @@ module Insight {
             title: "View Insight Logs",
             href: () => "#/insight/logs",
             isValid: (workspace:Workspace) => {
-                return Fabric.hasFabric(workspace) && Insight.hasInsight(workspace) && Insight.hasKibana(workspace);
+                return Fabric.hasFabric(workspace) && Insight.hasInsight(workspace) && Insight.hasKibana(workspace) && workspace.userIsMemberOf("admin");
             },
             isActive: () => workspace.isTopTabActive("insight-logs")
         });
@@ -93,7 +93,7 @@ module Insight {
             title: "View Insight Camel",
             href: () => "#/insight/camel",
             isValid: (workspace:Workspace) => {
-                return Fabric.hasFabric(workspace) && Insight.hasInsight(workspace) && Insight.hasKibana(workspace);
+                return Fabric.hasFabric(workspace) && Insight.hasInsight(workspace) && Insight.hasKibana(workspace) && workspace.userIsMemberOf("admin");
             },
             isActive: () => workspace.isTopTabActive("insight-camel")
         });
@@ -105,7 +105,7 @@ module Insight {
             title: "View Insight Elasticsearch",
             href: () => "#/insight/elasticsearch?tab=eshead",
             isValid: (workspace:Workspace) => {
-                return Fabric.hasFabric(workspace) && Insight.hasInsight(workspace) && Insight.hasEsHead(workspace);
+                return Fabric.hasFabric(workspace) && Insight.hasInsight(workspace) && Insight.hasEsHead(workspace) && workspace.userIsMemberOf("admin");
             },
             isActive: () => workspace.isTopTabActive("insight-eshead")
         });

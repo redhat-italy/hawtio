@@ -28,7 +28,7 @@ module Jetty {
       id: "jetty",
       content: "Jetty",
       title: "Manage your Jetty container",
-      isValid: (workspace:Workspace) => workspace.treeContainsDomainAndProperties("org.eclipse.jetty.server"),
+      isValid: (workspace:Workspace) => workspace.treeContainsDomainAndProperties("org.eclipse.jetty.server") && workspace.userIsMemberOf("admin"),
       href: () => "#/jetty/applications",
       isActive: (workspace:Workspace) => workspace.isTopTabActive("jetty")
     });

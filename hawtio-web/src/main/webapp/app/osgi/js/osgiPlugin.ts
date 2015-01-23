@@ -34,7 +34,7 @@ module Osgi {
       id: "osgi",
       content: "OSGi",
       title: "Visualise and manage the bundles and services in this OSGi container",
-      isValid: (workspace: Workspace) => workspace.treeContainsDomainAndProperties("osgi.core"),
+      isValid: (workspace: Workspace) => workspace.treeContainsDomainAndProperties("osgi.core") && workspace.userIsMemberOf("admin"),
       href: () => "#/osgi/bundle-list",
       isActive: (workspace: Workspace) => workspace.isLinkActive("osgi")
     });
